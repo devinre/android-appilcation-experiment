@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="_1_txt">1.txt</string>
+    <string name="inputfilename">请输入文件名</string>
+    <string name="inputcontent">请输入内容</string>
+    <string name="hello_world">hello world.</string>
+    <string name="sharedpreferences">写入SHAREDPREFERENCES文件</string>
+    <string name="sharedpreferences2">读取SHAREDPREFERENCES文件</string>
+    <string name="sd">从SD卡读取</string>
+    <string name="readfrominner">从内部读取</string>
+    <string name="sd2">写入SD卡存储</string>
+    <string name="writetoinner">写入内部存储</string>
+    <string name="xuanzhuantiaoyue">旋转跳跃我不停歇</string>
+    <string name="clean">清除</string>
+    <string name="openimage">打开图像</string>
+    <string name="_100">100</string>
+    <string name="joker">Joker</string>
+    <string name="name">Name:</string>
+    <string name="score">Score:</string>
+    <string name="modifydata">修改数据</string>
+    <string name="deletedata">删除数据</string>
+    <string name="insertdata">插入数据</string>
+    <string name="searchdata">查询数据</string>
+    <string name="unknown">不明</string>
+</resources>
