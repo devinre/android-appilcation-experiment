@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dh.myapplication.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>-->
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="vertical"
+    android:background="#98FB98"
+    tools:context=".MainActivity">
+    <Button
+        android:text="按钮 1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="按钮 2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="按钮 3"
+        android:layout_width="100dp"
+        android:layout_height="50dp" />
+</LinearLayout>-->
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TableLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:collapseColumns="1">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="独自一行的按钮"/>
+        <TableRow>
+            <Button android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="普通按钮 1"/>
+            <Button android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="普通按钮 2"/>
+            <Button android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="普通按钮 3"/>
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1,2">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="独自一行的按钮"/>
+        <TableRow>
+            <Button android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="普通按钮"/>
+            <Button android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="拉伸的按钮"/>
+            <Button android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="拉伸的按钮"/>
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="1">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="独自一行的按钮"/>
+        <TableRow>
+            <Button android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="普通按钮"/>
+            <Button android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="收缩的按钮"/>
+            <Button android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:text="普通按钮"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>-->
+<!--
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foreground="@mipmap/ic_launcher"
+    android:foregroundGravity="bottom|right"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:background="#f00"/>
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="#0f0"/>
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="#00f"/>
+</FrameLayout>-->
+<!--
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/img1"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/img1"/>
+    <ImageView
+        android:id="@+id/img2"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/img1"
+        android:layout_alignTop="@id/img1"
+        android:src="@drawable/img2"/>
+    <ImageView
+        android:id="@+id/img3"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img1"
+        android:layout_alignTop="@id/img1"
+        android:src="@drawable/img3"/>
+    <ImageView
+        android:id="@+id/img4"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/img1"
+        android:layout_alignLeft="@id/img1"
+        android:src="@drawable/img4"/>
+    <ImageView
+        android:id="@+id/img5"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img1"
+        android:layout_alignLeft="@id/img1"
+        android:src="@drawable/img5"/>
+</RelativeLayout>-->
+<!--
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="4"
+    android:rowCount="6"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_columnSpan="4"
+        android:layout_gravity="fill"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:padding="2dp"
+        android:background="#FFCCCC"
+        android:text="0"
+        android:textColor="#000"
+        android:textSize="50sp" />
+    <Button
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:text="回退"
+        android:textSize="35sp"/>
+    <Button
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:text="清空"
+        android:textSize="35sp"/>
+</GridLayout>-->
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我爱 Android"
+        android:textSize="20pt"
+        android:textColor="#EA5246"
+        android:textStyle="bold|italic"
+        android:background="#000000"
+        android:drawableEnd="@mipmap/ic_launcher" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="带阴影的 TextView"
+        android:textSize="18pt"
+        android:textColor="#EA5246"
+        android:shadowColor="#00f"
+        android:shadowDx="10.0"
+        android:shadowDy="8.0"
+        android:shadowRadius="3.0"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="矩形边框、渐变背景的 TextView"
+        android:gravity="center"
+        android:textSize="14pt"
+        android:background="@drawable/bg_border1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="圆角边框的 TextView"
+        android:textSize="14pt"
+        android:background="@drawable/bg_border2"/>
+</LinearLayout>-->
+<!--
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:stretchColumns="1"
+    tools:context=".MainActivity">
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="用户名： "
+            android:textSize="16sp"/>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:hint="请填写登录账号"
+            android:selectAllOnFocus="true" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="密码： "
+            android:textSize="16sp" />
+        &lt;!&ndash;android:inputType="numberPassword"表明只能接受数字密码。 &ndash;&gt;
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:inputType="numberPassword"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="年龄： "
+            android:textSize="16sp" />
+        &lt;!&ndash;android:inputType="number"表明是数值输入框。 &ndash;&gt;
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:inputType="number"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:text="性别： "
+            android:textSize="16sp" />
+        <RadioGroup android:id="@+id/rg"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男"
+                android:checked="true"/>
+            <RadioButton android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女"/>
+        </RadioGroup>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="生日： "
+            android:textSize="16sp" />
+        &lt;!&ndash;android:inputType="date"表明是日期输入框。 &ndash;&gt;
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:inputType="date"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:text="爱好： "
+            android:textSize="16sp"/>
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="体育"
+                android:id="@+id/like1"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="音乐"
+                android:id="@+id/like2"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美术"
+                android:id="@+id/like3"/>
+        </LinearLayout>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="电话号码： "
+            android:textSize="16sp" />
+        &lt;!&ndash;android:inputType="phone"表明是电话号码的输入框。 &ndash;&gt;
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:hint="请填写您的电话号码"
+            android:selectAllOnFocus="true"
+            android:inputType="phone"/>
+    </TableRow>
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="注册"/>
+</TableLayout>-->
+<!--
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ImageView android:id="@+id/img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flower"
+        android:layout_margin="5dp"/>
+    <ImageView android:id="@+id/img2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/flower"
+        android:scaleType="fitEnd"
+        android:layout_below="@+id/img1"
+        android:layout_margin="5dp" />
+    <ImageView android:id="@+id/img4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flower"
+        android:layout_below="@id/img2"
+        android:adjustViewBounds="true"
+        android:maxHeight="150dp"
+        android:maxWidth="150dp"
+        android:layout_margin="5dp" />
+    <ImageView android:id="@+id/img3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/flower"
+        android:tint="#77ff0000"
+        android:layout_alignTop="@+id/img2"
+        android:layout_toRightOf="@+id/img2"
+        android:layout_toEndOf="@+id/img2" />
+</RelativeLayout>-->
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/components"
+        android:divider="#f00"
+        android:dividerHeight="2dp"
+        android:headerDividersEnabled="false"/>
+</LinearLayout>-->
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/list1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#f00"
+        android:dividerHeight="2dp"
+        android:headerDividersEnabled="false" />
+</LinearLayout>-->
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/components"
+        android:spinnerMode="dialog" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>-->
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <Button
+        android:id="@+id/simple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="简单提示"/>
+    <Button
+        android:id="@+id/bn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="带图片的提示" />
+</LinearLayout>-->
+<!--
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TabWidget android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <FrameLayout android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView android:id="@+id/tab01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张三——2016/10/1"
+                android:textSize="20sp"/>
+            <TextView android:id="@+id/tab02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="李四——2016/10/2"
+                android:textSize="20sp"/>
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+    <Button
+        android:text="简单文本对话框"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button" />
+    <Button
+        android:text="简单列表对话框"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2" />
+    <Button
+        android:text="单选列表对话框"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3" />
+    <Button
+        android:text="多选列表对话框"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4" />
+</LinearLayout>

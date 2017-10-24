@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="components">
+        <item>Activity</item>
+        <item>Service</item>
+        <item>BroadcastReceiver</item>
+        <item>ContentProvider</item>
+    </string-array>
+</resources>
