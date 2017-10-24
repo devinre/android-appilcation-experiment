@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="loadmenu">长按我，加载菜单</string>
+    <string name="load_pic">请求图片</string>
+    <string name="load_html">请求HTML代码</string>
+    <string name="load_html_into">将HTML代码加载到WebView</string>
+</resources>

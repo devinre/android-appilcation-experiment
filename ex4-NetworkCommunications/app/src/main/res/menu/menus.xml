@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:id="@+id/one" android:title="@string/load_pic"/>
+        <item android:id="@+id/two" android:title="@string/load_html"/>
+        <item android:id="@+id/three" android:title="@string/load_html_into"/>
+    </group>
+</menu>
