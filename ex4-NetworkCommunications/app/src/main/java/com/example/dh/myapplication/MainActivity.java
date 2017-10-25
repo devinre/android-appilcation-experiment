@@ -6,7 +6,14 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.webkit.WebView;
+import android.widget.ImageView;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -15,11 +22,27 @@ public class MainActivity extends AppCompatActivity {
     private final static String HTML_URL="http://www.cc98.org";
     private Bitmap bitmap;
     private String detail="";
+    private ImageView imgPic;
+    private ScrollView scroll;
+    private WebView webView;
+    private TextView txtshow,txtMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        imgPic=(ImageView)findViewById(R.id.imgPic);
+        scroll=(ScrollView)findViewById(R.id.scroll);
+        webView=(WebView)findViewById(R.id.webView);
+        txtshow=(TextView)findViewById(R.id.txtshow);
+        txtMenu = (TextView) findViewById(R.id.txtMenu);
+        registerForContextMenu(txtMenu);
+    }
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo){
+        MenuInflater inflator=new MenuInflater(this);
+        inflator.inflate(R.menu.menus,menu);
+        super.onCreateContextMenu(menu,v,menuInfo);
     }
     @Override
     public boolean onContextItemSelected(MenuItem item){
@@ -60,37 +83,37 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
         }
+        return true;
     }
     private Handler handler = new Handler() {
         public void handleMessage(android.os.Message msg) {
             switch (msg.what) {
                 case 0x001:
                     hideAllWidget();
-                    wb_tobaidu.setVisibility(View.GONE);
-                    tv_tobaiduhtml.setVisibility(View.GONE);
-                    iv_getimage.setVisibility(View.VISIBLE);
-                    iv_getimage.setImageBitmap(bitmap);
-                    Toast.makeText(HttpURLConnectionActivity.this, "图片加载完毕", Toast.LENGTH_SHORT).show();
+                    imgPic.setVisibility(View.VISIBLE);
+                    imgPic.setImageBitmap(bitmap);
+                    Toast.makeText(MainActivity.this, "图片加载完毕", Toast.LENGTH_SHORT).show();
                     break;
                 case 0x002:
-                    wb_tobaidu.setVisibility(View.GONE);
-                    iv_getimage.setVisibility(View.GONE);
-                    tv_tobaiduhtml.setVisibility(View.VISIBLE);
-                    tv_tobaiduhtml.setText(detail);
-                    Toast.makeText(HttpURLConnectionActivity.this, "HTML代码加载完毕", Toast.LENGTH_SHORT).show();
+                    hideAllWidget();
+                    scroll.setVisibility(View.VISIBLE);
+                    txtshow.setText(detail);
+                    Toast.makeText(MainActivity.this, "HTML代码加载完毕", Toast.LENGTH_SHORT).show();
                     break;
                 case 0x003:
-                    tv_tobaiduhtml.setVisibility(View.GONE);
-                    iv_getimage.setVisibility(View.GONE);
-                    wb_tobaidu.setVisibility(View.VISIBLE);
-                    wb_tobaidu.loadDataWithBaseURL("", detail, "text/html", "UTF-8", "");
-                    Toast.makeText(HttpURLConnectionActivity.this, "网页加载完毕", Toast.LENGTH_SHORT).show();
+                    hideAllWidget();
+                    webView.setVisibility(View.VISIBLE);
+                    webView.loadDataWithBaseURL("", detail, "text/html", "UTF-8", "");
+                    Toast.makeText(MainActivity.this, "网页加载完毕", Toast.LENGTH_SHORT).show();
                     break;
                 default:
                     break;
             }
         }
-
-        ;
     };
+    private void hideAllWidget(){
+        imgPic.setVisibility(View.GONE);
+        scroll.setVisibility(View.GONE);
+        webView.setVisibility(View.GONE);
+    }
 }
