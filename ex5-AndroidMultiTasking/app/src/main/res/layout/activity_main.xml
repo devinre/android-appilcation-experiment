@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="1dp"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:paddingTop="1dp"
+    tools:context="com.example.dh.myapplication.MainActivity">
+    <Button
+        android:id="@+id/btnError"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/error" />
+    <Button
+        android:id="@+id/btnRunOnUiThread"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/runonuithread"
+        android:layout_below="@+id/btnError" />
+    <Button
+        android:id="@+id/btnPost"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/post"
+        android:layout_below="@+id/btnRunOnUiThread" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPost"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>
